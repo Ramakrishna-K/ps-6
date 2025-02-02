@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11/12/2024-pstask</title>
+</head>
+<body>
+    <pre>Task: The objective was to transform subarrays into a single array, remove duplicate values, and calculate the sum of the resulting array.</pre>
+    <script>
+    function subarrtoarr(arr){
+    final=[];sum=0
+    for(i=0;i<arr.length;i++){
+        for(j=0;j<arr[i].length;j++){
+            // final.push(arr[i][j])
+            console.log("subarrtoarr:-",arr[i][j])
+            isthere=false
+            for(k=0;k<final.length;k++){
+                if(final[k]==arr[i][j]){
+                    isthere=true
+                    break
+                }
+            }
+            if(!isthere){
+                final.push(arr[i][j])
+            }
+        }
+    }
+    console.log("duplicates removed:-",final)
+    for(l=0;l<final.length;l++){
+        sum=sum+final[l]
+    }
+    return sum
+}
+nums=[[1],[2],[3],[1,2],[2,3],[4,5],[1,3]]
+x=subarrtoarr(nums)
+console.log(x)
+    </script>
+</body>
+</html>
